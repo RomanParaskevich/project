@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{article.header}}</h1>
+    <p>{{article.text}}</p>
+    <p>Комментарии:</p>
+    {% for comment in comments %}
+    <p>{{comment.author}} :
+        {{comment.text}}</p>
+    {% endfor %}
+</body>
+</html>
