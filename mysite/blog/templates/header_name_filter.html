@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Article name filter {% endblock %}
+
+{% block body %}
+{% for article in articles %}
+<p><a href="/articles/{{ article.header }}">{{ article.header }}</a></p>
+{% endfor %}
+{% endblock %}

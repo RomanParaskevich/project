@@ -5,6 +5,7 @@ from django.db import models
 class Article(models.Model):
     header = models.CharField(max_length=100)
     text = models.TextField()
+    slug = models.SlugField(verbose_name='ЧПУ', max_length=100, unique=True)
 
 
 class Comment(models.Model):

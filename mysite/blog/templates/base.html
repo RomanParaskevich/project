@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body><a href="/articles">На главную</a>
+{% if user.is_authenticated %}
+<p>Привет {{ user.username }}</p>
+<a href="/users/logout"><button>Выйти из аккаунта</button></a>
+<p>Поиск тем</p>
+<form action="/name_filter" method="GET">
+    <input type="search" id="search_name" name="search_name">
+    <button type="submit">Поиск</button>
+</form>
+{% else %}
+<a href="/users/register"><button>Регистрация</button></a>  <a href="/users/login"><button>Логин</button></a>
+{% endif %}
+{% block body %}{% endblock %}
+</body>
+</html>
