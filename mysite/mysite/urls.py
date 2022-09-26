@@ -23,5 +23,6 @@ urlpatterns = [
     path('articles/', views.articles),
     path('articles/<slug:slug>', views.article),
     path('users/', include('users.urls')),
-    path('name_filter/', views.header_name_filter)
+    path('name_filter/', views.header_name_filter),
+    path('api/v1/', include('api.urls'))
 ]
